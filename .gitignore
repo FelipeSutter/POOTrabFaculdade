@@ -23,9 +23,9 @@
 hs_err_pid*
 replay_pid*
 
-/TrabCalculadora/.classpath
-/TrabCalculadora/.project
-/TrabCalculadora/.gitignore
-/TrabCalculadora/.settings
-/TrabCalculadora/bin
-/TrabCalculadora/build
+*.classpath
+*.project
+*.gitignore
+*.settings
+*bin
+*build
