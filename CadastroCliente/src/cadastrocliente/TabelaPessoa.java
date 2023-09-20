@@ -1,13 +1,20 @@
-package br.com.poo.cadastro.pessoas;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package cadastrocliente;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.table.AbstractTableModel;
 
+/**
+ *
+ * @author FACC
+ */
 public class TabelaPessoa extends AbstractTableModel{
-
-	private static final int COLUNA_NOME = 0;
+    
+    private static final int COLUNA_NOME = 0;
 	private static final int COLUNA_TELEFONE = 1;
 	private static final int COLUNA_EMAIL = 2;
 	private static final int COLUNA_LOGRADOURO = 3;
@@ -17,7 +24,7 @@ public class TabelaPessoa extends AbstractTableModel{
 	private static final int COLUNA_CIDADE = 7;
 	private static final int COLUNA_ESTADO = 8;
 	private static final int COLUNA_CEP = 9;
-	private String[] colunas = new String[] {"Felipe","2248-9090","felipe@gmail.com","aaaa","1234","rua dos anjos","bairro das amoras","Rio","SP","3000"};
+	private String[] colunas = new String[] {"Nome","Telefone","Email","Logradouro","Número","Complemento","Bairro","Cidade","Estado","Cep"};
 	private List<Pessoa> pessoas;
 	
 	
@@ -129,7 +136,5 @@ public class TabelaPessoa extends AbstractTableModel{
 		pessoas.remove(indice);
 		fireTableRowsDeleted(indice,indice);
 	}
-	
-	
-	
+    
 }
