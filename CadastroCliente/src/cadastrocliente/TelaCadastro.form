@@ -224,14 +224,20 @@
     <Component class="javax.swing.JComboBox" name="comboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
-            <StringItem index="0" value="RJ"/>
-            <StringItem index="1" value="SP"/>
-            <StringItem index="2" value="MG"/>
-            <StringItem index="3" value="RR"/>
-            <StringItem index="4" value="AG"/>
-            <StringItem index="5" value="ES"/>
-            <StringItem index="6" value="GO"/>
+          <StringArray count="13">
+            <StringItem index="0" value="AC"/>
+            <StringItem index="1" value="AL"/>
+            <StringItem index="2" value="AP"/>
+            <StringItem index="3" value="RJ"/>
+            <StringItem index="4" value="AM"/>
+            <StringItem index="5" value="BA"/>
+            <StringItem index="6" value="CE"/>
+            <StringItem index="7" value="SP"/>
+            <StringItem index="8" value="MG"/>
+            <StringItem index="9" value="RR"/>
+            <StringItem index="10" value="AG"/>
+            <StringItem index="11" value="ES"/>
+            <StringItem index="12" value="GO"/>
           </StringArray>
         </Property>
       </Properties>

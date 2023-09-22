@@ -56,17 +56,17 @@ public class TelaCadastro extends javax.swing.JDialog {
                         confirmado = true;
 		}
            
-                buttonCancelar.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edNome.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edTelefone.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edEmail.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edBairro.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edCidade.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edComplemento.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edNumero.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edLogradouro.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edCep.setVisible(opCadastro != OperacaoCadastro.consultar);
-		edCidade.setVisible(opCadastro != OperacaoCadastro.consultar);
+                buttonCancelar.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edNome.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edTelefone.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edEmail.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edBairro.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edCidade.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edComplemento.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edNumero.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edLogradouro.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edCep.setEnabled(opCadastro != OperacaoCadastro.consultar);
+		edCidade.setEnabled(opCadastro != OperacaoCadastro.consultar);
 	}
     
     @SuppressWarnings("unchecked")
@@ -146,7 +146,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Estado:");
 
-        comboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RJ", "SP", "MG", "RR", "AG", "ES", "GO" }));
+        comboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "RJ", "AM", "BA", "CE", "SP", "MG", "RR", "AG", "ES", "GO" }));
         comboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBoxActionPerformed(evt);
