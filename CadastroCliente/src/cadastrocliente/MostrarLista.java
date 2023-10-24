@@ -23,8 +23,9 @@ public class MostrarLista extends javax.swing.JDialog {
     public MostrarLista(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        tabelaPessoa = new TabelaPessoa(new ArrayList<>());
-	tabela.setModel(tabelaPessoa);
+        tabelaPessoa = new TabelaPessoa(new ArrayList<Pessoa>());
+	tabelaPessoa.abrirArquivoObjeto();
+        tabela.setModel(tabelaPessoa);
     }
 
     /**
@@ -147,6 +148,9 @@ public class MostrarLista extends javax.swing.JDialog {
         Pessoa pessoa = new Pessoa();
 	if(TelaCadastro.executar(OperacaoCadastro.incluir, pessoa)) {
             tabelaPessoa.incluirPessoa(pessoa);
+            // escritor 
+            tabelaPessoa.salvarArquivoObjeto();
+            
 	}
         
     }//GEN-LAST:event_buttonIncluirActionPerformed
@@ -158,6 +162,8 @@ public class MostrarLista extends javax.swing.JDialog {
             Pessoa pessoa = tabelaPessoa.obterPessoa(indice);
 		if(TelaCadastro.executar(OperacaoCadastro.alterar, pessoa)) {
 			tabelaPessoa.atualizarPessoa(indice, pessoa);
+                         // escritor 
+                        tabelaPessoa.salvarArquivoObjeto();
                 }
 	}
     }//GEN-LAST:event_buttonAlterarActionPerformed
@@ -167,6 +173,8 @@ public class MostrarLista extends javax.swing.JDialog {
         int indice = tabela.getSelectedRow();
 	if(indice >= 0) {
             tabelaPessoa.excluirPessoa(indice);
+             // escritor 
+            tabelaPessoa.salvarArquivoObjeto();
 	}
     }//GEN-LAST:event_buttonExcluirActionPerformed
 

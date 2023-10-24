@@ -4,8 +4,14 @@
  */
 package cadastrocliente;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -136,5 +142,46 @@ public class TabelaPessoa extends AbstractTableModel{
 		pessoas.remove(indice);
 		fireTableRowsDeleted(indice,indice);
 	}
+        
+        public void abrirArquivoObjeto(){
+            ObjectInputStream input = null;
+            try{
+                try{
+                    input = new ObjectInputStream(new FileInputStream("pessoas.dat"));
+                    Object objeto = null;
+                    pessoas.clear();
+                    do {
+                        objeto = input.readObject();
+                        pessoas.add((Pessoa)objeto);
+                    } while (objeto != null); 
+                    } finally {
+                        if (input != null){
+                        input.close();
+                    }
+                }
+                } catch (EOFException e) { //Não faz nada
+                } catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
+            }
+        
+        public void salvarArquivoObjeto() {
+            ObjectOutputStream output = null;
+            try{
+                try{
+                    output = new ObjectOutputStream(new FileOutputStream("pessoas.dat"));
+                    for (int i = 0; i < pessoas.size(); i++) {
+                        output.writeObject(pessoas.get(i));
+                    }
+                System.out.println("Salvo");
+                } finally {
+                    if (output != null){
+                        output.close();
+                    }
+                }
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+            }
     
 }

@@ -4,11 +4,21 @@
  */
 package cadastrocliente;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author FACC
  */
-public class Pessoa {
+public class Pessoa implements Serializable{
+    
     private String nome;
 	private String telefone;
 	private String email;
@@ -98,6 +108,6 @@ public class Pessoa {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
-	}
+	}   
         
 }
